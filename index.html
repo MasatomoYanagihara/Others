@@ -1,0 +1,31 @@
+<!-- Vue.jsのv-model(text)をVanilla JSで記述 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <input type="text" id="test_1">
+  <div id="test_2"></div>
+
+  <script>
+    const test_1 = document.getElementById("test_1");
+    const test_2 = document.getElementById("test_2");
+
+    test_1.addEventListener("input", () => {
+      test_2.textContent = test_1.value;
+    });
+
+  </script>
+
+</body>
+
+</html>
